@@ -35,7 +35,15 @@ public class listener implements PdReceiver {
         
         if (tone != null){
 //            System.out.print(tone.beat);
-            PdBase.sendList("receive_inst1", tone.pitch, tone.attack, "decay", "deetune", "lowpass", "highpass", "tembere");
+            PdBase.sendList("receive_inst1", 
+                    tone.pitch, 
+//                    "amplitude",    //0-127
+                    tone.attack,    //0-2000
+                    "decay",        //0-2000 
+                    "lowpass",      //100-22000
+                    "highpass",     //100-22000
+                    "tembere",      //0-12
+                    "deetune");     //0-5 );
     //        noteValue++;
     //        if (noteValue % 2 == 0) {
     //            PdBase.sendList("inst1_notevalue", noteValue, attack);
