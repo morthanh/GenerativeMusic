@@ -4,7 +4,7 @@
  */
 package buffer;
 
-import tone.Tone;
+import note.Note;
 
 /**
  *
@@ -22,8 +22,8 @@ public class ToneBufferExtended extends ToneBuffer {
         return BUFFER_SIZE - size();
     }
     
-    public boolean pushList(Tone[] tones){
-        for(Tone t : tones){
+    public boolean pushList(Note[] tones){
+        for(Note t : tones){
             if (!push(t)){
                 return false;
             }

@@ -1,5 +1,5 @@
 
-import tone.Tone;
+import note.Note;
 import buffer.ToneBuffer;
 import org.puredata.core.PdBase;
 import org.puredata.core.PdReceiver;
@@ -30,12 +30,12 @@ public class listener implements PdReceiver {
     
     @Override
     public void receiveBang(String source) {
-        Tone tone = buffer.pop();
+        Note tone = buffer.pop();
 //        System.out.print("Received Bang: ");
         
         if (tone != null){
 //            System.out.print(tone.beat);
-            PdBase.sendList("receive_inst1", 
+            PdBase.sendList("inst1_notevalue", 
                     tone.pitch, 
 //                    "amplitude",    //0-127
                     tone.attack,    //0-2000

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<ruleset>
+	...
+	<rules>
+		<rule type='scales'>
+			<scale>
+				<name>DORIAN</name>
+			</scale>
+			<scale>
+				<name>MAJOR</name>
+			</scale>
+		</rule>
+		<rule type='octave-span'>
+			<lower>3</lower>
+			<higher>6</higher>
+		</rule>
+		<rule type='chords'>
+			
+		</rule>
+		<rule></rule>
+		<rule></rule>
+		<rule></rule>
+		<rule></rule>
+		<rule></rule>
+		<rule></rule>
+		<rule></rule>
+		<rule></rule>
+		<rule></rule>
+		<rule></rule>
+		<rule></rule>
+	</rules>
+</ruleset>

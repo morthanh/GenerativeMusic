@@ -4,16 +4,16 @@ package buffer;
 import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
-import tone.Tone;
+import note.Note;
 
 /**
  *
  * @author mh
  */
-public class ToneBuffer extends Buffer<Tone> {
+public class ToneBuffer extends Buffer<Note> {
     
     
-    Queue<Tone> buffer = new LinkedBlockingQueue<>(BUFFER_SIZE);
+    Queue<Note> buffer = new LinkedBlockingQueue<>(BUFFER_SIZE);
 
     /**
      *  Creates a new ToneBuffer object. Uses an LinkedBlockingQueue object 
@@ -28,12 +28,12 @@ public class ToneBuffer extends Buffer<Tone> {
     
     
     @Override
-    public boolean push(Tone tone){
+    public boolean push(Note tone){
         return buffer.add(tone);
     }
     
     @Override
-    public Tone pop(){
+    public Note pop(){
         return buffer.poll();
     }
 

@@ -8,7 +8,7 @@ import buffer.ToneBuffer;
 import java.util.Random;
 import rules.Rules;
 import rules.Scale;
-import tone.Tone;
+import note.Note;
 
 /**
  *
@@ -59,7 +59,7 @@ public class RandomToneInScaleGenerator extends Generator{
                     break outer;
                 }
             }
-            buffer.push(new Tone(scale[noteIndex], 200, beat));
+            buffer.push(new Note(scale[noteIndex], 200, beat));
             
             
             

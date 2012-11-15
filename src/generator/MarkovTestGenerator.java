@@ -9,7 +9,7 @@ import buffer.ToneBufferExtended;
 import java.util.Random;
 import rules.Rules;
 import rules.Scale;
-import tone.Tone;
+import note.Note;
 import util.Markov;
 
 /**
@@ -29,14 +29,14 @@ public class MarkovTestGenerator extends Generator{
     private Random rand;
     
     
-    private Tone[][] toneLists;
+    private Note[][] toneLists;
     private int[] scale;
     
     
     public MarkovTestGenerator(Rules rules, Buffer buffer) {
         super(rules, buffer);
         markov = new Markov(numStates);
-        toneLists = new  Tone[numStates][pieceSize];
+        toneLists = new  Note[numStates][pieceSize];
         buildLists();
     }
     
@@ -54,7 +54,7 @@ public class MarkovTestGenerator extends Generator{
             for (int j = 0; j < pieceSize; j++){
                 int beat = beat();
                 int noteIndex = bottom+rand.nextInt(top-bottom+1);
-                toneLists[i][j] = new Tone(scale[noteIndex], 200, beat);
+                toneLists[i][j] = new Note(scale[noteIndex], 200, beat);
             }
         }
         

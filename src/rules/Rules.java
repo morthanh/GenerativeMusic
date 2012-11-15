@@ -14,8 +14,10 @@ public class Rules {
     //default/fallback rules
     private int tempoBpm = 100;                             //tempo in bpm
     private int[] usableScales = { Scale.SCALE_MAJOR };     //den/de skalaer som kan bruges
-    private int beatPerMeasure = 16;                        //antal slag pr. takt
     private int transpose = 0;                              //transponering
+    private int beats = 4;
+    private int bars = 4;
+    private int beatPerMeasure = beats*bars;                //antal slag pr. takt    (beats/bars)
     
     public Rules() {
     }

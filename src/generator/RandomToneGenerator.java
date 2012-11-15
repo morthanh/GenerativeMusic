@@ -1,7 +1,7 @@
 package generator;
 
 
-import tone.Tone;
+import note.Note;
 import buffer.ToneBuffer;
 import java.util.Random;
 import java.util.logging.Level;
@@ -80,7 +80,7 @@ public class RandomToneGenerator extends Generator{
             if (sleeptime - 10 >= minSleepTime){
                 sleeptime -= 10;
             }
-            buffer.push(new Tone(pitch, attach, beat));
+            buffer.push(new Note(pitch, attach, beat));
             
             
             System.out.println("Making tone: " + beat + " - sleeptime: "+ sleeptime);
